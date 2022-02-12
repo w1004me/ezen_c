@@ -1,0 +1,27 @@
+void check(int *arry);
+void main()
+{
+    int arry[6] = {12, 1, 7, 42, 36, 5};
+    int temp;
+    for(int i = 0; i< 5; i++)
+    {
+        for(int j = i+1; j < 6; j++)
+        {
+            if(arry[i] > arry[j])
+            {
+                temp = arry[i];
+                arry[i] = arry[j];
+                arry[j] = temp;
+            }
+            check(arry);
+        printf("\r\n");
+        }
+    }
+}
+void check(int *arry)
+{
+    for (int i = 0; i<6; i++)
+    {
+        printf("%d ", arry[i]);
+    }
+}
